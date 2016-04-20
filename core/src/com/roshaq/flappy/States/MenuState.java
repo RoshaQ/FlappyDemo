@@ -25,7 +25,7 @@ public class MenuState extends State{
         if(Gdx.input.justTouched())
         {
             gsm.set(new PlayState(gsm));// Przeniesenie nas w nowy stan czerwone okno i ptaszek :)
-            dispose();
+
         }
 
     }
@@ -47,5 +47,6 @@ public class MenuState extends State{
     public void dispose() {
         background.dispose();
         playBtn.dispose();
+        System.out.println("Menu State Dispose");
     }
 }

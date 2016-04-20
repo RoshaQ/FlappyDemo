@@ -22,10 +22,10 @@ public class GameStateManager {
     }
     //pop - usunięcie istniejącego elementu z początku kolejki;
     public void pop(){
-        states.pop();
+        states.pop().dispose(); // jak go wyrzucamy z tego stanu i nie chcemy go więcej używać to robimy dispose
     }
     public void set(State state){
-        states.pop();
+        states.pop().dispose();
         states.push(state);
     }
     // peek() funkcja Zwraca ostatni element
